@@ -1,0 +1,14 @@
+{
+  "name": "Web-Framework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Hilarioo/Web-Framework.git",
+  "author": "Jose H Gonzalez <40965405+Hilarioo@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}
