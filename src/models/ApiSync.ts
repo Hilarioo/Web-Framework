@@ -4,7 +4,7 @@ interface Props {
   id?: number;
 }
 
-export class Sync<T extends Props> {
+export class ApiSync<T extends Props> {
   constructor(public rootUrl: string) {}
 
   fetch(id: number): AxiosPromise {
