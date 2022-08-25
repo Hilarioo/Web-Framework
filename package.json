@@ -6,7 +6,13 @@
   "author": "Jose H Gonzalez <40965405+Hilarioo@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.27.2",
+    "concurrently": "^7.3.0",
+    "json-server": "^0.17.0",
     "parcel-bundler": "^1.12.5"
+  },
+  "scripts": {
+    "start": "concurrently \"parcel index.html\" \"json-server -w db.json\""
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.35.1",

@@ -1,3 +1,3 @@
-import { User } from './models/User';
+import axios from 'axios';
 
-const user = new User({ name: 'John', age: 30 });
+axios.get('http://localhost:3000/users/1');
