@@ -1,6 +1,6 @@
 # Udemy Project | Typescript: The Complete Developer's Guide
 
-Custom Front-End Framework from scratch which has similar functionality to ReactJS and AngularJS. Main focus of the project was to learn more about Design Patterns, Composition, Inheritance and proper structure of classes and interfaces.
+Custom Front-End Framework from scratch has similar functionality to ReactJS and AngularJS. The project's main focus was to learn more about Design Patterns, Composition, Inheritance, and the proper structure of classes and interfaces.
 
 #### Inpiration comes from Marionette JS & BackBone JS
 
@@ -25,8 +25,9 @@ const MyView = View.extend({
 
 #### Notes
 
-Model Classes: Handle data, used to represent Users, Blog Posts, Images, etc
-View Classes: Handle HTML and events caused by the user (like clicks)
+**Model Classes:** Handle data, used to represent Users, Blog Posts, Images, etc
+
+**View Classes:** Handle HTML and events caused by the user (like clicks)
 
 #### Run Code
 
