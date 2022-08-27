@@ -8,11 +8,12 @@ export abstract class View<T extends Model<K>, K> {
   }
 
   abstract template(): string;
-  eventsMap(): { [key: string]: () => void } {
+
+  regionsMap(): { [key: string]: string } {
     return {};
   }
 
-  regionsMaps(): { [key: string]: string } {
+  eventsMap(): { [key: string]: () => void } {
     return {};
   }
 
@@ -35,7 +36,7 @@ export abstract class View<T extends Model<K>, K> {
   }
 
   mapRegions(fragment: DocumentFragment): void {
-    const regionsMap = this.regionsMaps();
+    const regionsMap = this.regionsMap();
 
     for (const key in regionsMap) {
       const selector = regionsMap[key];
@@ -47,6 +48,8 @@ export abstract class View<T extends Model<K>, K> {
     }
   }
 
+  onRender(): void {}
+
   render(): void {
     this.parent.innerHTML = '';
 
@@ -55,6 +58,8 @@ export abstract class View<T extends Model<K>, K> {
 
     this.bindEvents(templateElement.content);
     this.mapRegions(templateElement.content);
+
+    this.onRender();
 
     this.parent.append(templateElement.content);
   }
