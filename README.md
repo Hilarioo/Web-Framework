@@ -1,27 +1,47 @@
-// Notes
+# Udemy Project | Typescript: The Complete Developer's Guide
+
+Custom Front-End Framework from scratch which has similar functionality to ReactJS and AngularJS. Main focus of the project was to learn more about Design Patterns, Composition, Inheritance and proper structure of classes and interfaces.
+
+#### Inpiration comes from Marionette JS & BackBone JS
+
+##### Similar Implementation: [Class Views](https://marionettejs.com/docs/master/marionette.view.html)
+
+```
+import _ from 'underscore';
+import { View } from 'backbone.marionette';
+
+const MyView = View.extend({
+  template: _.template(`
+    <div id="first-region"></div>
+    <div id="second-region"></div>
+    <div id="third-region"></div>
+  `),
+  regions: {
+    firstRegion: '#first-region',
+    secondRegion: '#second-region'
+  }
+});
+```
+
+#### Notes
 
 Model Classes: Handle data, used to represent Users, Blog Posts, Images, etc
 View Classes: Handle HTML and events caused by the user (like clicks)
 
-// Start
-yarn start uses concurrently to run both the API and UI simultaneously, eliminating the need for two seperate terminals
-UI --> yarn parcel index.html
-API --> yarn json-server -w db.json
+#### Run Code
 
-// RESTful conventions
-GET --> /posts --> Retrieve all posts
+```
+yarn install
 
-GET --> /posts/:id --> Retrieve post with the specified id
+yarn start
+```
 
-POST --> /posts --> Create a new post
+`yarn start` uses concurrently to run both the API and UI simultaneously
 
-PUT --> /posts/:id --> Update a post
+Follows RESTful conventions
 
-DELETE --> /posts/:id --> Delete a post
+**Serialize** --> convert data from an object into some save-able format (json)
 
-serialize --> convert data from an object into some save-able format (json)
+**Deserialize** --> put data on an object using some previously saved data (json)
 
-deserialize --> put data on an object using some previously saved data (json)
-
-In Typescript a string can be a type
-In JS/TS all object keys are strings
+In Typescript a string can be a type and all object keys are strings
