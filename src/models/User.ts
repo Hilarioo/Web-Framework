@@ -1,4 +1,4 @@
-import { Model } from './Models';
+import { Model } from './Model';
 import { Attributes } from './Attributes';
 import { ApiSync } from './ApiSync';
 import { Events } from './Events';
